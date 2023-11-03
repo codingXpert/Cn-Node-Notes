@@ -21,3 +21,14 @@ fs.writeFile('employee.txt', 'Name: Rahul Kumar', (err) => {
     }
 });
 console.log('This will print before writing the file');
+
+
+// ===================== Append/Update Data In Existing File ===========================
+fs.appendFile('employee.txt', '\n Name: Vivek Raj', (err) => {   // if no file is there a new file will be created by employee.txt and data is saved into it otherwise the data is appended to the sane existing file.
+    if(err){                                                 // if we run the code again it will overwrite the appended data, it will not create a new data
+        console.log(err);
+    }else{
+        console.log('Data/file is appended/updated');
+    }
+});
+console.log('This will print before appending/updating the data');
