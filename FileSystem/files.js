@@ -34,8 +34,21 @@ try {
     console.log('File Does Not Exist');
 }
 
+
 /* 
 Note:- The fs.readFileSync will internally create a buffer as temporary memory to maintain the speed of fetching data from data.txt and printing them to the terminal.
  we have to convert the returned the buffer to sting using toString() method to get the actual result or we can pass the encoding method as option while fetching the file 
  to get the desired result.
 */
+
+
+/*
+Note: Why There Is fs.unlinkSync() Why Not fs.deleteSync() instead , this is because it is not
+in the power or authority of node js to delete any file/folder as in some directory or folders the read/write/delete operations
+are not allowed by operating system.
+
+The actual deletion is done by OS.
+
+The nlinkSync() is just used to delete/unlink the link between the operating system and the program and rest of the operations are 
+handled by operating system itself
+*/ 
