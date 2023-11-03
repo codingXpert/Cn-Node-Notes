@@ -2,6 +2,7 @@ const fs = require('fs');
  
 // To read file content using blocking code(executed by main thread)
 
+// =========================== Reading A FIle ===========================
 console.log("Starting to read");
 
 // const result = fs.readFileSync('data.txt');
@@ -11,6 +12,14 @@ const result = fs.readFileSync('data.txt', {encoding: 'utf-8'});
 console.log(result);
 
 console.log("This message is logged after file is loaded");
+
+
+//======================== Creating And Writing A File=========================
+try {
+    fs.writeFileSync('employee.txt', 'Name: Ranjeet, Role: Teacher, NAtionality: Indian'); // create the file by the name employee.txt if not created and save the data.
+} catch (error) {
+    console.log(error);
+}
 
 
 /* 
