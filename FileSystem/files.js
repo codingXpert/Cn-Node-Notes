@@ -16,10 +16,14 @@ console.log("This message is logged after file is loaded");
 
 //======================== Creating And Writing A File=========================
 try {
-    fs.writeFileSync('employee.txt', 'Name: Ranjeet, Role: Teacher, NAtionality: Indian'); // create the file by the name employee.txt if not created and save the data.
+    fs.writeFileSync('employee.txt', 'Name: Ranjeet, Role: Teacher, Nationality: Indian'); // create the file by the name employee.txt if not created and save the data.
 } catch (error) {
     console.log(error);
 }
+
+
+//==================== Appending More Data To The Existing File=================
+fs.appendFileSync('employee.txt', 'Name: Pratap, Role: Fresher, Nationality: Indian');
 
 
 /* 
