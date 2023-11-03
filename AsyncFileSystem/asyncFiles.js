@@ -32,3 +32,13 @@ fs.appendFile('employee.txt', '\nName: Vivek Raj', (err) => {   // if no file is
     }
 });
 console.log('This will print before appending/updating the data');
+
+
+// ========================= Deleting An Existing File ===============================
+fs.unlink('employee.txt', (err) =>{
+    if(err){
+        console.log(err);
+    }else{
+        console.log('File is deleted');
+    }
+});
