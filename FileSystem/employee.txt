@@ -1,1 +1,0 @@
-Name: Ranjeet, Role: Teacher, Nationality: Indian Name: Pratap, Role: Fresher, Nationality: Indian

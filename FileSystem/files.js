@@ -26,6 +26,14 @@ try {
 fs.appendFileSync('employee.txt', 'Name: Pratap, Role: Fresher, Nationality: Indian');
 
 
+
+// ===================== Deleting An Existing File =========================
+try {
+    fs.unlinkSync('employee.txt')
+} catch (error) {
+    console.log('File Does Not Exist');
+}
+
 /* 
 Note:- The fs.readFileSync will internally create a buffer as temporary memory to maintain the speed of fetching data from data.txt and printing them to the terminal.
  we have to convert the returned the buffer to sting using toString() method to get the actual result or we can pass the encoding method as option while fetching the file 
