@@ -3,8 +3,10 @@ const path = require('path');
 
 const filePath = path.join('../AsyncFileSystem/info.txt');
 const filePathResolved = path.resolve('../AsyncFileSystem/info.txt');
+const fileExtension = path.extname(filePathResolved);
 console.log(filePath);
 console.log(filePathResolved);
+console.log(fileExtension);
 
 fs.readFile(filePathResolved, (err, data) => {
     if(err){
